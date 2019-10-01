@@ -1,7 +1,5 @@
 # Maine DMR Fall and Spring Trawl Survey Data Prepared for GMRI
 
-@aeweston
-
 ## Summary
 The Maine DMR prepared  __Excel/CSV__ files each with a corresponding __MS Word__ description file for use by GMRI. They include data for the years 2000 thru 2017. This repo contains code to prepare the files for import into the GMRI ERDDAP Server [DMR data](http://docker1.gmri.org:8230/erddap/search/index.html?searchFor=DMR). With Ashley's help these were all converted to plain csv files and text files before processing. The scripts will work if new files are created with additional years of Trawl Surveys.
 
