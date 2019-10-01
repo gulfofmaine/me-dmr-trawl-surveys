@@ -102,7 +102,8 @@ CLASSES
      |  ----------------------------------------------------------------------
 ```
 
-`dmr_dict_copy_tow.py`
+`dmr_dict_copy_tow.py`  
+This is the main script. Creates both `OUT_FULL_TOW_<csv_input_file>.csv` and `OUT_MIN_TOW_<csv_input_file.csv` which are ready to load into ERDDAP. We are only using the FULL_TOW csv files for loading into ERDDAP.
 
 ```
 usage: dmr_dict_copy_tow.py [-h] [-o OUTPUT] [-v] csv_file num_flds
@@ -117,4 +118,17 @@ optional arguments:
   -o OUTPUT, --output OUTPUT
                         Type of output file: 'full' or 'min'. Default: 'min'
   -v, --verbose         verbose output.
+```
+
+`dmr_lobster_csv_concat.py`  
+This just concatenates the 34 individual Lobster_LengthFrequency.csv files into a single `ALL_Lobster_LengthFrequency.csv` file. Using the first file headers.
+
+```
+usage: dmr_lobster_csv_concat.py [-h] dir
+
+positional arguments:
+  dir         Directory with Lobster CSV files
+
+optional arguments:
+  -h, --help  show this help message and exit
 ```
