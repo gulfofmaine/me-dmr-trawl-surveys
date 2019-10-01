@@ -1,0 +1,15 @@
+EXPCATCH_forGMRI description:
+This excel file provides all of the expanded catch information for each tow of each survey started in Fall 2000 going to Spring 2017. The catch is expanded if the tow was less than 20 minutes and if the catch was subsampled (only 100 individuals of a species are measured from a tow. If there were more than 100 of one species caught in a tow the 100 that were measured are weighed and that weight is used to expand the data to get an expanded catch amount). The weight of all the species are taken, but this is expanded if the tow was less than 20 minutes.
+* DMR_TRIP_ID: this is the survey season and year (FL00 is Fall 2000 and so on).
+* REGION: this is the region the catch was from/the tow was completed in. This will be 1 Ð 5.
+* DMR_EFFORT_ID: this is the tow number of the specified survey. This is what you will use to identify which catch is from which tow. For example for all of the catch entries for tow 1 of Fall 2000 will have a DMR_EFFORT_ID of 1 for the DMR_TRIP_ID of FL00.
+* STRATUM: this is the strata the tow/catch was from. This will be 1 -4.
+* START_LATITUDE and START_LONGITUDE: the start lat and long of the tow.
+* COMMON_NAME: common name of the species caught
+* DMR_TRAWL_FISHID: these are unique numbers for each species we use for the database.
+* W_NUM: this is the expanded catch of that species.
+* W_WT: this is the expanded weight (kg) of that species.
+* SCIENTIFIC_NAME: scientific name of the species.
+* STATION_TYPE: see tow information description. This is the code we use to indicate if the tow was random, a random alternate, a non-random alternate, fixed, or a duplicate.
+* AVGLAT and AVGLON: the average latitude and longitude of the tow.
+* AVGDEPTH: average depth of the tow in fathoms.

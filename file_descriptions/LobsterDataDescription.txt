@@ -1,0 +1,7 @@
+For lobster length frequency data:
+The data wouldn’t export to one large excel file so I had to break up the length frequency for the lobster measurements by survey. You'll find excel files for each survey in the Lobster data folder. DMR_TRIP_ID will confirm which survey the data is from (along with the file name, however, if there is a mistake in my naming of the file you'll be able to double by looking at that column). The DMR_EFFORT_ID is the tow number from that survey. REGION is what region the tow was conducted in (1-5) and STRATUM is the strata the tow was conducted in (1-4). SEX is if the lobster was a male or female. SAMPLE_LENGTH is the carapace length in mm. FREQUENCY is the number that length occurred in the tow, this frequency is the raw frequency and not expanded. WFREQ is the expanded frequency. The frequency is expanded if there is a subsample taken (which is rare since it seems like they have no subsampled lobsters much in the past) and if the tow was shorter or longer than 20 minutes.
+
+ SEX is if the lobster was a male or female.
+ SAMPLE_LENGTH is the carapace length in mm.
+ FREQUENCY is the number that length occurred in the tow, this frequency is the raw frequency and not expanded.
+ WFREQ is the expanded frequency. The frequency is expanded if there is a subsample taken (which is rare since it seems like they have no subsampled lobsters much in the past) and if the tow was shorter or longer than 20 minutes.

@@ -1,0 +1,13 @@
+EXP_LengthFrequency data:
+This excel file provides the length frequency data for each species caught and measured during each tow of each survey. You can identify which survey and which tow the species were caught in using the DMR_TRIP_ID and DMR_EFFORT_ID column. The trip ID is the season and year the survey was conducted. The effort ID is the tow conducted during that survey. Region and stratum are the region (1 -5) and stratum (1 -4) the tow was conducted in. See the tow information description sheet for a detailed description of Station. These are codes we use to identify what type of tow it was 
+       R    = stratified random
+       F    = fixed (sentinel)  -- just note this was dropped in Fall 2005. 
+	RA = random alternate
+	NR = non-random alternate
+	D    = duplicate (oops)
+
+DMR_TRAWL_FISHID: our unique code for each species.
+COMMON_NAME: common name of the species
+SAMPLE_LENGTH: the measured length of the species in cm. They call this centerline length, which basically for species with a forked tail it’s fork length and for species with a homocercal caudel fin it’s total length. 
+SumofEXP_FREQ: this is one of the expansions. If the species’ measurements were subsampled since there were more than 100 in the catch then this expansion was done first. Then the second expansion (if the tow was < or > 20 minutes) was completed, which is the Expanded_FREQ. The Expanded_FREQ is the column you want to use to examine the length data since it is the final expansion. The frequency is the number of individuals measured at that length for that species in the catch.
+SumofFREQUENCY: this is just the raw frequency before any expansions were done. 

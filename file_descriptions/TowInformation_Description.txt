@@ -1,0 +1,37 @@
+Trawl Survey Data:
+1. Tow Information File:
+a. This file has basic information for each tow in each survey starting with FL00 when the survey started. For each survey 120 tows are proposed, but this is not always accomplished each survey due to gear and bottom. The data provided are from FL00 to FL17. 
+b. DMR_TRIP_ID: this is the survey season and year (ex. FL00 is the Fall 2000 survey). 
+c. EFFORT_START_DATE: is the date the tow took place during the specific survey.
+d. EFFORT_START_TIME: is the time the tow started
+e. DMR_EFFORT_IDENTIFIER: this is the tow number of that survey (it will range from 1 to 120, or to however many tows were completed that survey). 
+f. START_LATITUDE and START_LONGITUDE: this is the start position of the tow.
+g. END_LATITUDE and END_LONGITUDE: this is the end position of the tow
+h. REGION: is the region the tow was completed in (1 through 5)
+i. STRATUM: is the stratum the tow was completed in (1 through 4 – strata 1: 5-40 m, strata 2: 40-70m, strata 3: 70 to 100m, strata 4: >100m). Note: the fourth depth stratum was added in Spring 2003.
+j. STATION_TYPE: this is the code we use for each station. We randomly select all of the stations (tow locations) before each survey. However, due to gear and bottom some locations are not able to be completed. Due to this the captain will move to a nearby site to complete the tow. To make note of this while out on the survey we use a station_type code. R is for random, which means this was the tow randomly selected before the survey. RA is random alternative, which means this tow was a make up for a random tow that couldn’t be done. A RA is a tow the captain randomly found where no gear or bad bottom was present and hasn’t been towed before. NA is a non-random alternate tow to make up for a randomly selected tow that couldn’t be completed. A NA is a tow that has previously been towed before which is why it is non-random. Later on, the survey they changed the coding of non-random from NA to NR, however, I’m not exactly sure if this changed in the database or not. F is a fixed site. When the survey first started, they had a series of fixed sites they would survey at each year. These fixed sites were dropped in Fall 2005. D is for duplicate. This is when they have completed a tow twice so they duplicated the tow at that site.
+k. START_DEPTH: this is the start depth of the survey in fathoms.
+l. LENGTH_TOW_TIME: this is the amount of time of the tow. All tows are supposed to be 20 minutes, however, due to gear or bottom some of the tows may be shortened. 
+m. EFFORT_SEQ_NO: this is a unique number that our database generates to connect each sample (catch) entry to this tow information.
+n. TOW_LENGTH: is the length of the tow in nm.
+o. WATER_TEMP_C: is the bottom water temp in degrees Celsius 
+p. SALINITY: this is the bottom salinity (psu)
+q. END_DEPTH: end depth in fathoms
+r. SURFACE_TEMP_C: surface water temperature of the tow
+s. SURFACE_SALINITY: surface salinity of the tow.
+t. GEAR_CONDITION: out unique code for the condition of the gear. 
+       K = OK, no damage to insignificant damage
+	D = Damage: Wing torn no more than 6 ft; upper belly torn no more than 3 ft; 
+       lower belly torn no more than 4 ft; cod-end or liner torn no more than 2 ft.
+	H = hung down with no to minor damage, 1 or 2 lines/buoys on 1 door
+	O = Significant* obstruction in net, such as fixed gear, large rocks, mud, logs,
+       several lines/buoys on both doors, etc.
+	A = tow duration shortened to avoid fixed gear or unsuitable bottom 
+	C = net did not perform consistently due to strong currents or other factors
+u. EFFORT_END_DATE: date the tow ended
+v. EFFORT_END_TIME: time the tow ended
+w. WAVE_HEIGHT: estimated wave height during that tow
+x. WIND: estimated wind speed
+y. WIND_DIRECTION: estimated wind direction
+z. GRID_ID: the grid number the tow was conducted in.
+
