@@ -1,0 +1,245 @@
+<!-- BEGIN me_dmr_lengthfreq -->
+<dataset type="EDDTableFromAsciiFiles" datasetID="me_dmr_lengthfreq" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/home2/data/GMRI/ME_DMR_SEAGRANT/</fileDir>
+    <fileNameRegex>OUT_MIN_TOW_EXP_LengthFrequency.*\.csv</fileNameRegex>
+    <recursive>true</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <charset>ISO-8859-1</charset>
+    <columnSeparator>,</columnSeparator>
+    <columnNamesRow>1</columnNamesRow>
+    <firstDataRow>2</firstDataRow>
+    <preExtractRegex></preExtractRegex>
+    <postExtractRegex></postExtractRegex>
+    <extractRegex></extractRegex>
+    <columnNameForExtract></columnNameForExtract>
+    <sortedColumnSourceName></sortedColumnSourceName>
+    <sortFilesBySourceNames></sortFilesBySourceNames>
+    <fileTableInMemory>false</fileTableInMemory>
+    <accessibleViaFiles>false</accessibleViaFiles>
+    <!-- sourceAttributes>
+    </sourceAttributes -->
+    <!-- Please specify the actual cdm_data_type (TimeSeries?) and related info below, for example...
+    -->
+    <addAttributes>
+        <att name="defaultDataQuery">&amp;time&gt;=""</att>
+        <att name="defaultGraphQuery">longitude,latitude,time&COMMON_NAME=%22haddock%22&YEAR=2017&.draw=markers&.marker=5|5&amp;.color=0x000000&.colorBar=|||||amp&;.bgColor=0xffffffff</att>
+        <att name="subsetVariables">DMR_TRIP_IDENTIFIER,DMR_EFFORT_IDENTIFIER,SEASON,YEAR,COMMON_NAME, STATION_TYPE</att>
+        <att name="cdm_data_type">Other</att>
+        <att name="Conventions">COARDS, CF-1.6, ACDD-1.3</att>
+        <att name="creator_email">ebridger@gmri.org</att>
+        <att name="creator_name">Gulf of Maine Research Institute</att>
+        <att name="creator_type">institution</att>
+        <att name="creator_url">http://www.gmri.org/</att>
+        <att name="infoUrl">http://www.gmri.org/</att>
+        <att name="institution">Gulf of Maine Research Institute</att>
+        <att name="keywords">common, COMMON_NAME, data, dmr, DMR_EFFORT_IDENTIFIER, DMR_TRAWL_FISHID, DMR_TRIP_IDENTIFIER, effort, end, exp, expanded, Expanded_FREQ, fishid, freq, frequency, gmrui, identifier, iso, ISO_END_TIME, ISO_START_TIME, latitude, length, longitude, name, region, sample, SAMPLE_LENGTH, season, start, station, STATION_TYPE, stratum, sum, SumOfEXP_FREQ, SumOfFREQUENCY, survey, time, trawl, trip, type, year</att>
+        <att name="license">[standard]</att>
+        <att name="sourceUrl">(local files)</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v29</att>
+        <att name="summary">This file provides the length frequency data for each species caught and measured during each tow of each survey. You can identify which survey and which tow the species were caught in using the DMR_TRIP_ID and DMR_EFFORT_ID column. The trip ID is the season and year the survey was conducted. The effort ID is the tow conducted during that survey. Region and stratum are the region (1 -5) and stratum (1 -4) the tow was conducted in. See the STATION_TYPE value for a detailed description of Station types.</att>
+        <att name="title">Minimum Tow Info - DMR Trawl Survey Expanded Length Frequency</att>
+    </addAttributes>
+    <dataVariable>
+        <sourceName>DMR_TRIP_IDENTIFIER</sourceName>
+        <destinationName>DMR_TRIP_IDENTIFIER</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">DMR TRIP IDENTIFIER</att>
+            <att name="description">survey season and year ex. FL00 is the Fall 2000 survey</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>DMR_EFFORT_IDENTIFIER</sourceName>
+        <destinationName>DMR_EFFORT_IDENTIFIER</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">DMR EFFORT IDENTIFIER</att>
+            <att name="description">Tow number for this survey</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>REGION</sourceName>
+        <destinationName>REGION</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">REGION</att>
+            <att name="description">the region the tow was completed in (1 through 5)</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>STRATUM</sourceName>
+        <destinationName>STRATUM</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">STRATUM</att>
+            <att name="description">Stratum the tow was completed in (1 to 4). strata 1: 5 to 40 m, strata 2: 40 to 70m, strata 3: 70 to 100m, strata 4: &gt; 100m).</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>STATION_TYPE</sourceName>
+        <destinationName>STATION_TYPE</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">STATION TYPE</att>
+            <att name="description">The code used for each station. We randomly select all of the stations (tow locations) before each survey. However, due to gear and bottom some locations are not able to be completed. Due to this the captain will move to a nearby site to complete the tow. To make note of this while out on the survey we use a station_type code. R is for random, which means this was the tow randomly selected before the survey. RA is random alternative, which means this tow was a make up for a random tow that couldn't be done. A RA is a tow the captain randomly found where no gear or bad bottom was present and hasn't been towed before. NA is a non-random alternate tow to make up for a randomly selected tow that couldn't be completed. A NA is a tow that has previously been towed before which is why it is non-random. Later on they changed the coding of non-random from NA to NR. F is a fixed site. When the survey first started, they had a series of fixed sites they would survey at each year. These fixed sites were dropped in Fall 2005. D is for duplicate. This is when they have completed a tow twice so they duplicated the tow at that site.</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>DMR_TRAWL_FISHID</sourceName>
+        <destinationName>DMR_TRAWL_FISHID</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">DMR TRAWL FISHID</att>
+            <att name="description">DMR database unique numbers for each species</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>COMMON_NAME</sourceName>
+        <destinationName>COMMON_NAME</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">COMMON NAME</att>
+            <att name="description">common name of the species caught</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>SAMPLE_LENGTH</sourceName>
+        <destinationName>SAMPLE_LENGTH</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">SAMPLE LENGTH</att>
+            <att name="description">the measured length of the species in cm. They call this centerline length, which basically for species with a forked tail it's fork length and for species with a homocercal caudel fin it's total length.</att>
+            <att name="units">cm</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>SumOfEXP_FREQ</sourceName>
+        <destinationName>SumOfEXP_FREQ</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Sum Of EXP FREQ</att>
+            <att name="description">This is one of the expansions. If the species measurements were subsampled since there were more than 100 in the catch then this expansion was done first. Then the second expansion (if the tow was &lt; or &gt 20 minutes) was completed, which is the Expanded_FREQ.</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Expanded_FREQ</sourceName>
+        <destinationName>Expanded_FREQ</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Expanded FREQ</att>
+            <att name="description">The Expanded_FREQ is the column you want to use to examine the length data since it is the final expansion. The frequency is the number of individuals measured at that length for that species in the catch.</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>SumOfFREQUENCY</sourceName>
+        <destinationName>SumOfFREQUENCY</destinationName>
+        <dataType>short</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">Sum Of FREQUENCY</att>
+            <att name="description">this is the raw frequency before any expansions were done.</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>START_LATITUDE</sourceName>
+        <destinationName>latitude</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">90.0</att>
+            <att name="colorBarMinimum" type="double">-90.0</att>
+            <att name="long_name">Latitude</att>
+            <att name="source_name">START_LATITUDE</att>
+            <att name="standard_name">latitude</att>
+            <att name="units">degrees_north</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>START_LONGITUDE</sourceName>
+        <destinationName>longitude</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">180.0</att>
+            <att name="colorBarMinimum" type="double">-180.0</att>
+            <att name="long_name">Longitude</att>
+            <att name="source_name">START_LONGITUDE</att>
+            <att name="standard_name">longitude</att>
+            <att name="units">degrees_east</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ISO_START_TIME</sourceName>
+        <destinationName>time</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">ISO START TIME</att>
+            <att name="standard_name">time</att>
+            <att name="units">yyyy-MM-dd'T'HH:mm</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ISO_END_TIME</sourceName>
+        <destinationName>ISO_END_TIME</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">ISO END TIME</att>
+            <att name="standard_name">time</att>
+            <att name="units">yyyy-MM-dd'T'HH:mm</att>
+            <att name="description">End time of the tow</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>YEAR</sourceName>
+        <destinationName>YEAR</destinationName>
+        <dataType>short</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">YEAR</att>
+            <att name="description">Tow Year</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>SEASON</sourceName>
+        <destinationName>SEASON</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">SEASON</att>
+            <att name="description">Tow Season. Spring or Fall</att>
+        </addAttributes>
+    </dataVariable>
+</dataset>
+<!-- END me_dmr_lengthfreq -->

@@ -1,0 +1,277 @@
+
+<!-- BEGIN me_dmr_biological -->
+<dataset type="EDDTableFromAsciiFiles" datasetID="me_dmr_biological" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/home2/data/GMRI/ME_DMR_SEAGRANT/</fileDir>
+    <fileNameRegex>OUT_MIN_TOW_Biological.*\.csv</fileNameRegex>
+    <recursive>true</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <charset>ISO-8859-1</charset>
+    <columnSeparator>,</columnSeparator>
+    <columnNamesRow>1</columnNamesRow>
+    <firstDataRow>2</firstDataRow>
+    <preExtractRegex></preExtractRegex>
+    <postExtractRegex></postExtractRegex>
+    <extractRegex></extractRegex>
+    <columnNameForExtract></columnNameForExtract>
+    <sortedColumnSourceName></sortedColumnSourceName>
+    <sortFilesBySourceNames></sortFilesBySourceNames>
+    <fileTableInMemory>false</fileTableInMemory>
+    <accessibleViaFiles>false</accessibleViaFiles>
+    <!-- sourceAttributes>
+    </sourceAttributes -->
+    <addAttributes>
+        <att name="defaultDataQuery">&amp;time&gt;=""</att>
+        <att name="defaultGraphQuery">longitude,latitude,SAMPLE_WEIGHT&YEAR=2017&COMMON_NAME=%22haddock%22&.draw=markers&.marker=5|5&amp;.color=0x000000&.colorBar=|||||amp&;.bgColor=0xffffffff</att>
+        <att name="cdm_data_type">Other</att>
+        <att name="Conventions">COARDS, CF-1.6, ACDD-1.3</att>
+        <att name="creator_email">ebridger@gmri.org</att>
+        <att name="creator_name">Gulf of Maine Research Institute</att>
+        <att name="creator_url">http://www.gmri.org/</att>
+        <att name="infoUrl">http://www.gmri.org/</att>
+        <att name="institution">Gulf of Maine Research Institute</att>
+        <att name="keywords">age, biological, common, COMMON_NAME, data, dmr, DMR_EFFORT_IDENTIFIER, DMR_SAMPLE_IDENTIFIER, DMR_TRAWL_FISHID, DMR_TRIP_IDENTIFIER, effort, end, fishid, frequency, fullness, gulf, gut, GUT_FULLNESS, identifier, instituet, iso, ISO_END_TIME, ISO_START_TIME, latitude, length, longitude, maine, maturity, MATURITY_TYPE, name, region, research, sample, SAMPLE_LENGTH, SAMPLE_TYPE, SAMPLE_WEIGHT, season, sex, start, stratum, survey, time, trawl, trip, twawl, type, weight, year</att>
+        <att name="license">[standard]</att>
+        <att name="sourceUrl">(local files)</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v29</att>
+        <att name="subsetVariables">DMR_TRIP_IDENTIFIER,DMR_EFFORT_IDENTIFIER,SEASON,YEAR,COMMON_NAME,SEX, MATURITY_TYPE</att>
+        <att name="summary">DMR Trawl Survey for GMRI. This file includes all data on maturity that were taken during the surveys. The species examined for age and maturity are decided before the survey. In this file you will find DMR_TRIP_IDENTIFIER (indicates the survey), DMR_EFFORT_ID (this is the tow number during that survey), REGION (1-5), STRATUM (1-4). The COMMON_NAME is the species, SAMPLE_LENGTH is the length of the species in cm and FREQUENCY is the number of times that length was examined (this shouldn't be over 1, but I did find a frequency of 7 for an alewive, that is a mistake since we don't examine alewives for age or maturity. It must have been entered in as a bio sample accidentally). The DMR_TRAWL_FISHID is our unique code for a species. DMR_SAMPLE_ID is a unique code for each sample. I wouldn't use the AGE column since I haven't gone and checked if those are ages entered after someone has aged the fish. SAMPLE_WEIGHT is the weight of the species in grams. GUT_FULLNESS is from when they have done stomach content in the past. If you do want to use that let me know and I'll dig up some more information on it.</att>
+        <att name="title">Minimum Tow Info - DMR Trawl Survey Biological Data</att>
+    </addAttributes>
+    <dataVariable>
+        <sourceName>DMR_TRIP_IDENTIFIER</sourceName>
+        <destinationName>DMR_TRIP_IDENTIFIER</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">DMR TRIP IDENTIFIER</att>
+            <att name="description">survey season and year ex. FL00 is the Fall 2000 survey</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>DMR_EFFORT_IDENTIFIER</sourceName>
+        <destinationName>DMR_EFFORT_IDENTIFIER</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">DMR EFFORT IDENTIFIER</att>
+            <att name="description">Tow number for this survey</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>REGION</sourceName>
+        <destinationName>REGION</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">REGION</att>
+            <att name="description">the region the tow was completed in (1 through 5)</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>STRATUM</sourceName>
+        <destinationName>STRATUM</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">STRATUM</att>
+            <att name="description">Stratum the tow was completed in (1 to 4). strata 1: 5 to 40 m, strata 2: 40 to 70m, strata 3: 70 to 100m, strata 4: &gt; 100m).</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>COMMON_NAME</sourceName>
+        <destinationName>COMMON_NAME</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">COMMON NAME</att>
+            <att name="description">common name of the species caught</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>SAMPLE_LENGTH</sourceName>
+        <destinationName>SAMPLE_LENGTH</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">SAMPLE_LENGTH</att>
+            <att name="description">Length of the species in cm</att>
+            <att name="units">cm</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>FREQUENCY</sourceName>
+        <destinationName>FREQUENCY</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">FREQUENCY</att>
+            <att name="description">This is the number of times that length was examined and should not be over 1</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>SAMPLE_TYPE</sourceName>
+        <destinationName>SAMPLE_TYPE</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">SAMPLE TYPE</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>SEX</sourceName>
+        <destinationName>SEX</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">SEX</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>MATURITY_TYPE</sourceName>
+        <destinationName>MATURITY_TYPE</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">MATURITY TYPE</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>DMR_TRAWL_FISHID</sourceName>
+        <destinationName>DMR_TRAWL_FISHID</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">DMR TRAWL FISHID</att>
+            <att name="description">DMR database unique numbers for each species</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>DMR_SAMPLE_IDENTIFIER</sourceName>
+        <destinationName>DMR_SAMPLE_IDENTIFIER</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">DMR SAMPLE IDENTIFIER</att>
+            <att name="description">Unique code for each sample.</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>SAMPLE_WEIGHT</sourceName>
+        <destinationName>SAMPLE_WEIGHT</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">SAMPLE WEIGHT</att>
+            <att name="missing_value" type="int">99999</att>
+            <att name="description">The weight of the species in grams.</att>
+            <att name="units">g</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>GUT_FULLNESS</sourceName>
+        <destinationName>GUT_FULLNESS</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">GUT FULLNESS</att>
+            <att name="description">This from  when they have done stomach content in the past.</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>YEAR</sourceName>
+        <destinationName>YEAR</destinationName>
+        <dataType>short</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">YEAR</att>
+            <att name="description">Tow Year</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>SEASON</sourceName>
+        <destinationName>SEASON</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">SEASON</att>
+            <att name="description">Tow Season. Spring or Fall</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ISO_START_TIME</sourceName>
+        <destinationName>time</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">ISO START TIME</att>
+            <att name="standard_name">time</att>
+            <att name="units">yyyy-MM-dd'T'HH:mm</att>
+            <att name="description">Start time of the tow</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>ISO_END_TIME</sourceName>
+        <destinationName>ISO_END_TIME</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="long_name">ISO END TIME</att>
+            <att name="standard_name">time</att>
+            <att name="units">yyyy-MM-dd'T'HH:mm</att>
+            <att name="description">End time of the tow</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>START_LATITUDE</sourceName>
+        <destinationName>latitude</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">90.0</att>
+            <att name="colorBarMinimum" type="double">-90.0</att>
+            <att name="long_name">Latitude</att>
+            <att name="source_name">START_LATITUDE</att>
+            <att name="standard_name">latitude</att>
+            <att name="units">degrees_north</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>START_LONGITUDE</sourceName>
+        <destinationName>longitude</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">180.0</att>
+            <att name="colorBarMinimum" type="double">-180.0</att>
+            <att name="long_name">Longitude</att>
+            <att name="source_name">START_LONGITUDE</att>
+            <att name="standard_name">longitude</att>
+            <att name="units">degrees_east</att>
+        </addAttributes>
+    </dataVariable>
+</dataset>
+
+<!-- END me_dmr_biological -->
