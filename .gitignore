@@ -10,6 +10,8 @@ __pycache__/
 *.nc
 notes
 *.notes
+# pickle file
+*.p
 
 # Distribution / packaging
 .Python
