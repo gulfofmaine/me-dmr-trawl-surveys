@@ -32,8 +32,8 @@
         <att name="creator_name">Gulf of Maine Research Institute</att>
         <att name="creator_type">institution</att>
         <att name="creator_url">http://www.gmri.org/</att>
-        <att name="infoUrl">http://www.gmri.org/</att>
-        <att name="institution">Gulf of Maine Research Institute</att>
+        <att name="infoUrl">https://www.maine.gov/dmr/science-research/projects/trawlsurvey/index.html</att>
+        <att name="institution">State of Maine Department of Marine Resources</att>
         <att name="keywords">dmr, DMR_EFFORT_IDENTIFIER, DMR_TRIP_IDENTIFIER, ISO_END_TIME, ISO_START_TIME, latitude, length, longitude, name, region, sample, SAMPLE_LENGTH, season, start, station, STATION_TYPE, stratum, survey, time, trawl, trip, type, year</att>
         <att name="license">[standard]</att>
         <att name="sourceUrl">(local files)</att>

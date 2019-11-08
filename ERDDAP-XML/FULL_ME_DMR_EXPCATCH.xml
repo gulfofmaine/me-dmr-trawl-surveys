@@ -27,8 +27,8 @@
         <att name="defaultGraphQuery">longitude,latitude,time&YEAR=2017&.draw=markers&.marker=5|5&amp;.color=0x000000&.colorBar=|||||amp&;.bgColor=0xffffffff</att>
         <att name="cdm_data_type">Other</att>
         <att name="Conventions">COARDS, CF-1.6, ACDD-1.3</att>
-        <att name="infoUrl">http://www.gmri.org/</att>
-        <att name="institution">Gulf of Maine Research Institute</att>
+        <att name="infoUrl">https://www.maine.gov/dmr/science-research/projects/trawlsurvey/index.html</att>
+        <att name="institution">State of Maine Department of Marine Resources</att>
         <att name="keywords">atmosphere, atmospheric, avgdepth, avglat, avglon, common, COMMON_NAME, condition, data, date, density, depth, direction, dmr, DMR_EFFORT_IDENTIFIER, DMR_TRAWL_FISHID, DMR_TRIP_IDENTIFIER, earth, Earth Science &gt; Atmosphere &gt; Atmospheric Winds &gt; Surface Winds, Earth Science &gt; Oceans &gt; Ocean Waves &gt; Significant Wave Height, Earth Science &gt; Oceans &gt; Salinity/Density &gt; Salinity, effort, EFFORT_END_DATE, EFFORT_END_TIME, EFFORT_SEQ_NO, EFFORT_START_DATE, EFFORT_START_TIME, end, END_DEPTH, END_LATITUDE, END_LONGITUDE, fishid, gear, GEAR_CONDITION, grid, GRID_ID, height, identifier, iso, ISO_END_TIME, ISO_START_TIME, latitude, length, LENGTH_TOW_TIME, local, longitude, name, num, ocean, oceans, practical, quality, region, salinity, science, scientific, SCIENTIFIC_NAME, sea, sea_surface_wave_significant_height, sea_water_practical_salinity, season, seawater, seq, significant, source, start, START_DEPTH, station, STATION_TYPE, stratum, surface, SURFACE_SALINITY, SURFACE_TEMP_C, temperature, time, tow, TOW_LENGTH_NM, TOW_QUALITY, trawl, trip, type, w, W_NUM, W_WT, water, WATER_TEMP_C, wave, WAVE_HEIGHT, waves, wind, WIND_DIRECTION, wind_from_direction, winds, year</att>
         <att name="keywords_vocabulary">GCMD Science Keywords</att>
         <att name="license">[standard]</att>
