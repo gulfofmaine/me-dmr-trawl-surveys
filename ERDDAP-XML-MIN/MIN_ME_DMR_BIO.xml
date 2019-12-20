@@ -32,6 +32,16 @@
         <att name="creator_url">http://www.gmri.org/</att>
         <att name="infoUrl">https://www.maine.gov/dmr/science-research/projects/trawlsurvey/index.html</att>
         <att name="institution">State of Maine Department of Marine Resources</att>
+        <att name="creator_name" >Rebecca Peters</att>
+        <att name="creator_email" >rebecca.j.peters@maine.gov</att>
+        <att name="creator_country" >USA</att>
+        <att name="creator_institution" >Maine - New Hampshire Inshore Trawl Survey</att>
+        <att name="creator_type" >institution</att>
+        <att name="creator_sector" >gov_state</att>
+        <att name="creator_url" >https://www.maine.gov/dmr/science-research/projects/trawlsurvey/index.html</att>
+        <att name="creator_phone" >207-633-9530</att>
+        <att name="creator_city" >West Boothbay Harbor</att>
+        <att name="creator_state" >ME,NH</att>
         <att name="keywords">age, biological, common, COMMON_NAME, data, dmr, DMR_EFFORT_IDENTIFIER, DMR_SAMPLE_IDENTIFIER, DMR_TRAWL_FISHID, DMR_TRIP_IDENTIFIER, effort, end, fishid, frequency, fullness, gulf, gut, GUT_FULLNESS, identifier, instituet, iso, ISO_END_TIME, ISO_START_TIME, latitude, length, longitude, maine, maturity, MATURITY_TYPE, name, region, research, sample, SAMPLE_LENGTH, SAMPLE_TYPE, SAMPLE_WEIGHT, season, sex, start, stratum, survey, time, trawl, trip, twawl, type, weight, year</att>
         <att name="license">[standard]</att>
         <att name="sourceUrl">(local files)</att>
